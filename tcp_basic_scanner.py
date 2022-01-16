@@ -2,8 +2,8 @@
 
 import re, sys, subprocess, socket
 
-ports = [22, 25, 80, 443]
-services = ["ssh", "smtp", "http", "https"]
+ports = [20, 21, 22, 25, 80, 135, 139, 443, 445]
+services = ["ftp", "ftp", "ssh", "smtp", "http", "rpc", "ldap", "https", "Samba"]
 
 if len(sys.argv) != 2:
     print("\n [!] Uso: python3 " + sys.argv[0] + " IP\n")

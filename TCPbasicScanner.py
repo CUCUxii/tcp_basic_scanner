@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import re, sys, subprocess, socket
+from fuzzxii import *
 
 ports = []
 services = []
@@ -67,6 +68,13 @@ def main(ports, SERVICES):
 	for x in open_ports:
 		if x in ports:
 			get_services(x, services, ports)
+			
+	if 80 in open_ports:
+		fuzz(ip_adress, 80)
+	elif 443 in open_ports:
+		fuzz(ip_adress, 443)
+	else:
+		print("No webs to fuzz")
 
 if __name__ == '__main__':
 	main(ports, services)

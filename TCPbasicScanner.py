@@ -52,8 +52,8 @@ def main(ports, SERVICES):
 	os_name = get_os(ttl)
 
 	if os_name == "Windows":
-		ports = [20, 21, 22, 25, 80, 88, 135, 139, 443, 445, 1433]
-		services = ["ftp", "ftp", "ssh", "smtp", "http", "kerberos", "rpc", "ldap", "https", "Samba", "MsSQL"]
+		ports = [20, 21, 22, 25, 80, 88, 135, 139, 443, 445, 1433, 5985]
+		services = ["ftp", "ftp", "ssh", "smtp", "http", "kerberos", "rpc", "ldap", "https", "Samba", "MsSQL", "winrm"]
 	elif os_name == "Linux":
 		ports = [20, 21, 22, 25, 80, 139, 443]
 		services = ["ftp", "ftp", "ssh", "smtp", "http", "ldap", "https"]
